@@ -1,0 +1,197 @@
+digraph DNA_Leven_Centraal {
+  graph [rankdir=TB, bgcolor="lightyellow", splines=ortho];
+  node [fontname="Arial", penwidth=1.3];
+  edge [arrowhead=none];
+
+  // ========== CENTRALE NODE: DNA ==========
+  "DNA_Centraal" [label="DNA", shape=square, style=filled, fillcolor="#FFD700", fontsize=20, penwidth=2];
+
+  // ========== LEVEL 1: HOOFDONDERDELEN (Rondom DNA Centraal) ==========
+  "I" [label="I. DNA: Basis van Alles", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "II" [label="II. Structuur: Dubbele Helix", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "III" [label="III. Replicatie", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "IV" [label="IV. Genexpressie", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "V" [label="V. Regulatie", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "VI" [label="VI. Mutaties", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "VII" [label="VII. DNA Technologie", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "VIII" [label="VIII. Overig", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+  "IX" [label="IX. DNA en Evolutie", shape=ellipse, style=filled, fillcolor="#FF9A8B"];
+
+  // Verbind Level 1 nodes met de centrale DNA node
+  DNA_Centraal -> "I";
+  DNA_Centraal -> "II";
+  DNA_Centraal -> "III";
+  DNA_Centraal -> "IV";
+  DNA_Centraal -> "V";
+  DNA_Centraal -> "VI";
+  DNA_Centraal -> "VII";
+  DNA_Centraal -> "VIII";
+  DNA_Centraal -> "IX";
+
+
+  // ========== LEVEL 2+3: SUBONDERDELEN (zelfde als voorheen, maar nu onder Level 1 nodes) ==========
+  // --- I. DNA Basis ---
+  "I_Definitie" [label="Definitie", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "I_Definitie_1" [label="Desoxyribonucleïnezuur", shape=note, fillcolor="#FFF3B0"];
+  "I_Definitie_2" [label="(macromolecuul, polymer)", shape=note, fillcolor="#FFF3B0"];
+  I -> I_Definitie -> {I_Definitie_1, I_Definitie_2}
+
+  "I_Functies" [label="Functies", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "I_Functies_1" [label="Genetische informatieopslag", shape=note, fillcolor="#FFF3B0"];
+  "I_Functies_2" [label="Ontwikkeling/groei regulatie", shape=note, fillcolor="#FFF3B0"];
+  "I_Functies_3" [label="Eiwitsynthese-instructies", shape=note, fillcolor="#FFF3B0"];
+  "I_Functies_4" [label="Mutatiebron\n(variatie/evolutie)", shape=note, fillcolor="#FFF3B0"];
+  I -> I_Functies -> {I_Functies_1, I_Functies_2, I_Functies_3, I_Functies_4}
+
+  "I_Overerving" [label="Overerving", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "I_Overerving_1" [label="Mendeliaanse patronen", shape=note, fillcolor="#FFF3B0"];
+  "I_Overerving_2" [label="Chromosomale overdracht\n(geslachtscellen)", shape=note, fillcolor="#FFF3B0"];
+  I -> I_Overerving -> {I_Overerving_1, I_Overerving_2}
+
+  // --- II. Structuur ---
+  "II_Componenten" [label="Componenten", shape=box, style=filled, fillcolor="#96CEB4"];
+  "II_Componenten_1" [label="Nucleotiden", shape=note, fillcolor="#FFF3B0"];
+  "II_Componenten_2" [label="desoxyribose\nfosfaatgroep\nstikstofbase", shape=note, fillcolor="#FFF3B0"];
+  "II_Componenten_3" [label="Basenparing:\nA-T (2H)\nC-G (3H)", shape=note, fillcolor="#FFF3B0"];
+  II -> II_Componenten -> {II_Componenten_1, II_Componenten_2, II_Componenten_3}
+
+  "II_Karakteristieken" [label="Karakteristieken", shape=box, style=filled, fillcolor="#96CEB4"];
+  "II_Karakteristieken_1" [label="Antiparallel (5’→3’)", shape=note, fillcolor="#FFF3B0"];
+  "II_Karakteristieken_2" [label="B-vorm (standaard)", shape=note, fillcolor="#FFF3B0"];
+  "II_Karakteristieken_3" [label="Z-vorm (zigzag)", shape=note, fillcolor="#FFF3B0"];
+  II -> II_Karakteristieken -> {II_Karakteristieken_1, II_Karakteristieken_2, II_Karakteristieken_3}
+
+  "II_Chromatine" [label="Chromatine", shape=box, style=filled, fillcolor="#96CEB4"];
+  "II_Chromatine_1" [label="Histonen + DNA → nucleosomen", shape=note, fillcolor="#FFF3B0"];
+  "II_Chromatine_2" [label="Condensatie → chromosomen", shape=note, fillcolor="#FFF3B0"];
+  "II_Chromatine_3" [label="metacentrisch\ntelocentrisch", shape=note, fillcolor="#FFF3B0"];
+  II -> II_Chromatine -> {II_Chromatine_1, II_Chromatine_2, II_Chromatine_3}
+
+  // --- III. Replicatie ---
+  "III_Semi" [label="Semi-conservatief", shape=box, style=filled, fillcolor="#45B7D1"];
+  "III_Semi_1" [label="1 originele + 1 nieuwe streng", shape=note, fillcolor="#FFF3B0"];
+  III -> III_Semi -> III_Semi_1
+
+  "III_Enzymen" [label="Enzymen/Stappen", shape=box, style=filled, fillcolor="#45B7D1"];
+  "III_Enzymen_1" [label="Helicase (ontwinding)", shape=note, fillcolor="#FFF3B0"];
+  "III_Enzymen_2" [label="Primase (RNA-primer)", shape=note, fillcolor="#FFF3B0"];
+  "III_Enzymen_3" [label="DNA-polymerase (synthese)", shape=note, fillcolor="#FFF3B0"];
+  "III_Enzymen_4" [label="Ligase (Okazaki)", shape=note, fillcolor="#FFF3B0"];
+  III -> III_Enzymen -> {III_Enzymen_1, III_Enzymen_2, III_Enzymen_3, III_Enzymen_4}
+
+  "III_Eindprobleem" [label="Eindprobleem", shape=box, style=filled, fillcolor="#45B7D1"];
+  "III_Eindprobleem_1" [label="Telomeren", shape=note, fillcolor="#FFF3B0"];
+  "III_Eindprobleem_2" [label="Telomerase\n(stam/kankercellen)", shape=note, fillcolor="#FFF3B0"];
+  III -> III_Eindprobleem -> {III_Eindprobleem_1, III_Eindprobleem_2}
+
+  // --- IV. Genexpressie ---
+  "IV_Transcriptie" [label="Transcriptie", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "IV_Transcriptie_1" [label="RNA-polymerase", shape=note, fillcolor="#FFF3B0"];
+  "IV_Transcriptie_2" [label="Splicing (exons/introns)", shape=note, fillcolor="#FFF3B0"];
+  "IV_Transcriptie_3" [label="mRNA (5’ cap, poly-A)", shape=note, fillcolor="#FFF3B0"];
+  IV -> IV_Transcriptie -> {IV_Transcriptie_1, IV_Transcriptie_2, IV_Transcriptie_3}
+
+  "IV_Translatie" [label="Translatie", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "IV_Translatie_1" [label="Ribosoomsubunits (rRNA)", shape=note, fillcolor="#FFF3B0"];
+  "IV_Translatie_2" [label="tRNA (anticodon)", shape=note, fillcolor="#FFF3B0"];
+  "IV_Translatie_3" [label="Codontabel (start/stop)", shape=note, fillcolor="#FFF3B0"];
+  IV -> IV_Translatie -> {IV_Translatie_1, IV_Translatie_2, IV_Translatie_3}
+
+  "IV_Posttranslationeel" [label="Post-translationeel", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "IV_Posttranslationeel_1" [label="Vouwing", shape=note, fillcolor="#FFF3B0"];
+  "IV_Posttranslationeel_2" [label="Fosforylering", shape=note, fillcolor="#FFF3B0"];
+  "IV_Posttranslationeel_3" [label="Glycosylering", shape=note, fillcolor="#FFF3B0"];
+  IV -> IV_Posttranslationeel -> {IV_Posttranslationeel_1, IV_Posttranslationeel_2, IV_Posttranslationeel_3}
+
+  // --- V. Regulatie ---
+  "V_Transcriptiecontrole" [label="Transcriptiecontrole", shape=box, style=filled, fillcolor="#96CEB4"];
+  "V_Transcriptiecontrole_1" [label="Promoters/enhancers", shape=note, fillcolor="#FFF3B0"];
+  "V_Transcriptiecontrole_2" [label="Transcriptiefactoren (TF)", shape=note, fillcolor="#FFF3B0"];
+  V -> V_Transcriptiecontrole -> {V_Transcriptiecontrole_1, V_Transcriptiecontrole_2}
+
+  "V_Epigenetica" [label="Epigenetica", shape=box, style=filled, fillcolor="#96CEB4"];
+  "V_Epigenetica_1" [label="DNA-methylatie (CpG)", shape=note, fillcolor="#FFF3B0"];
+  "V_Epigenetica_2" [label="Histonmodificatie (acetylatie)", shape=note, fillcolor="#FFF3B0"];
+  V -> V_Epigenetica -> {V_Epigenetica_1, V_Epigenetica_2}
+
+  "V_ExterneFactoren" [label="Externe factoren", shape=box, style=filled, fillcolor="#96CEB4"];
+  "V_ExterneFactoren_1" [label="Hormonen", shape=note, fillcolor="#FFF3B0"];
+  "V_ExterneFactoren_2" [label="Voeding", shape=note, fillcolor="#FFF3B0"];
+  "V_ExterneFactoren_3" [label="Stress", shape=note, fillcolor="#FFF3B0"];
+  V -> V_ExterneFactoren -> {V_ExterneFactoren_1, V_ExterneFactoren_2, V_ExterneFactoren_3}
+
+  // --- VI. Mutaties ---
+  "VI_Typen" [label="Typen", shape=box, style=filled, fillcolor="#45B7D1"];
+  "VI_Typen_1" [label="Puntmutatie (missense/nonsense)", shape=note, fillcolor="#FFF3B0"];
+  "VI_Typen_2" [label="Frameshift", shape=note, fillcolor="#FFF3B0"];
+  "VI_Typen_3" [label="Chromosomaal", shape=note, fillcolor="#FFF3B0"];
+  VI -> VI_Typen -> {VI_Typen_1, VI_Typen_2, VI_Typen_3}
+
+  "VI_Reparatie" [label="Reparatie", shape=box, style=filled, fillcolor="#45B7D1"];
+  "VI_Reparatie_1" [label="Mismatch-reparatie", shape=note, fillcolor="#FFF3B0"];
+  "VI_Reparatie_2" [label="Nucleotide-excisie", shape=note, fillcolor="#FFF3B0"];
+  VI -> VI_Reparatie -> {VI_Reparatie_1, VI_Reparatie_2}
+
+  "VI_Gevolgen" [label="Gevolgen", shape=box, style=filled, fillcolor="#45B7D1"];
+  "VI_Gevolgen_1" [label="Kanker (p53)", shape=note, fillcolor="#FFF3B0"];
+  "VI_Gevolgen_2" [label="Cystische fibrose", shape=note, fillcolor="#FFF3B0"];
+  VI -> VI_Gevolgen -> {VI_Gevolgen_1, VI_Gevolgen_2}
+
+  // --- VII. DNA Technologie ---
+  "VII_PCR" [label="PCR", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "VII_PCR_1" [label="Thermocycler", shape=note, fillcolor="#FFF3B0"];
+  "VII_PCR_2" [label="Taq-polymerase", shape=note, fillcolor="#FFF3B0"];
+  "VII_PCR_3" [label="Primers", shape=note, fillcolor="#FFF3B0"];
+  VII -> VII_PCR -> {VII_PCR_1, VII_PCR_2, VII_PCR_3}
+
+  "VII_Sequencing" [label="Sequencing", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "VII_Sequencing_1" [label="Sanger (dideoxy)", shape=note, fillcolor="#FFF3B0"];
+  "VII_Sequencing_2" [label="NGS", shape=note, fillcolor="#FFF3B0"];
+  VII -> VII_Sequencing -> {VII_Sequencing_1, VII_Sequencing_2}
+
+  "VII_CRISPRCas9" [label="CRISPR-Cas9", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "VII_CRISPRCas9_1" [label="Guide RNA", shape=note, fillcolor="#FFF3B0"];
+  "VII_CRISPRCas9_2" [label="Genknock-out", shape=note, fillcolor="#FFF3B0"];
+  "VII_CRISPRCas9_3" [label="Gentherapie", shape=note, fillcolor="#FFF3B0"];
+  VII -> VII_CRISPRCas9 -> {VII_CRISPRCas9_1, VII_CRISPRCas9_2, VII_CRISPRCas9_3}
+
+  "VII_Toepassingen" [label="Toepassingen", shape=box, style=filled, fillcolor="#4ECDC4"];
+  "VII_Toepassingen_1" [label="Forensisch (DNA-profielen)", shape=note, fillcolor="#FFF3B0"];
+  "VII_Toepassingen_2" [label="GMO’s (Bt-katoen)", shape=note, fillcolor="#FFF3B0"];
+  VII -> VII_Toepassingen -> {VII_Toepassingen_1, VII_Toepassingen_2}
+
+  // --- VIII. Overig ---
+  "VIII_JunkDNA" [label="Junk-DNA", shape=box, style=filled, fillcolor="#96CEB4"];
+  "VIII_JunkDNA_1" [label="Transposons", shape=note, fillcolor="#FFF3B0"];
+  "VIII_JunkDNA_2" [label="lncRNA/miRNA", shape=note, fillcolor="#FFF3B0"];
+  VIII -> VIII_JunkDNA -> {VIII_JunkDNA_1, VIII_JunkDNA_2}
+
+  "VIII_Telomeren" [label="Telomeren", shape=box, style=filled, fillcolor="#96CEB4"];
+  "VIII_Telomeren_1" [label="Verkorting → veroudering", shape=note, fillcolor="#FFF3B0"];
+  VIII -> VIII_Telomeren -> VIII_Telomeren_1
+
+  "VIII_Chromosomen" [label="Chromosomen", shape=box, style=filled, fillcolor="#96CEB4"];
+  "VIII_Chromosomen_1" [label="Diploïd vs. haploïd", shape=note, fillcolor="#FFF3B0"];
+  "VIII_Chromosomen_2" [label="Aneuploïdie (Downsyndroom)", shape=note, fillcolor="#FFF3B0"];
+  VIII -> VIII_Chromosomen -> {VIII_Chromosomen_1, VIII_Chromosomen_2}
+
+  // --- IX. Evolutie ---
+  "IX_MoleculaireEvolutie" [label="Moleculaire evolutie", shape=box, style=filled, fillcolor="#45B7D1"];
+  "IX_MoleculaireEvolutie_1" [label="Fylogenetische bomen (16S rRNA)", shape=note, fillcolor="#FFF3B0"];
+  "IX_MoleculaireEvolutie_2" [label="Horizontale genoverdracht", shape=note, fillcolor="#FFF3B0"];
+  IX -> IX_MoleculaireEvolutie -> {IX_MoleculaireEvolutie_1, IX_MoleculaireEvolutie_2}
+
+  "IX_Conservatie" [label="Conservatie", shape=box, style=filled, fillcolor="#45B7D1"];
+  "IX_Conservatie_1" [label="HOX-genen (lichaamsplan)", shape=note, fillcolor="#FFF3B0"];
+  IX -> IX_Conservatie -> IX_Conservatie_1
+
+  "IX_Selectie" [label="Selectie", shape=box, style=filled, fillcolor="#45B7D1"];
+  "IX_Selectie_1" [label="Positief/negatief", shape=note, fillcolor="#FFF3B0"];
+  "IX_Selectie_2" [label="Sikkelcelanemie + malaria", shape=note, fillcolor="#FFF3B0"];
+  IX -> IX_Selectie -> {IX_Selectie_1, IX_Selectie_2}
+
+  // ===== KERNCONCEPTEN (SPECIALE NODE) =====
+  "IX_Kernconcepten" [label="Kernconcepten:\n• Centrale dogma\n• Complementariteit\n• Genetische code\n• Semi-conservatief",
+      shape=box, style="filled,dashed", fillcolor="#FFEEAD", fontsize=12];
+  IX -> IX_Kernconcepten [style=dashed]
+ }
